@@ -97,9 +97,7 @@ Commissioning. The Joiner Credential should be unique to each device.
 Done
 ```
 
-> Note: The Joiner Credential is a device-specific string of all uppercase alphanumeric 
-> characters (0-9 and A-Y, excluding I, O, Q and Z for readability), with a length 
-> between 6 and 32 characters.
+> Note: The Joiner Credential is a device-specific string of all uppercase alphanumeric characters (0-9 and A-Y, excluding I, O, Q and Z for readability), with a length between 6 and 32 characters.
 
 ### Restrict to a specific Joiner
 
