@@ -56,11 +56,11 @@ The most common workflow is:
     1.  Install the GNU toolchain and other dependencies (optional):
 
             $ ./script/bootstrap
-            
+
     1.  Set up the environment:
 
             $ ./bootstrap
-            
+
     1.  Configure and build, using pre-defined platform examples with optional customization via common switches:
         1.  Modify OpenThread compile-time constants in the selected platform's `/examples/platforms/{platform}/openthread-core-{platform}-config.h` file
         1.  Build the configuration:
