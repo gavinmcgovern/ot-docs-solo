@@ -126,26 +126,28 @@ Logs are sent to the `syslog` by default. On Linux, this is `/var/log/syslog.`
 
 1.  On the simulated node, bring up Thread:
 
-        > dataset init new
-        Done
-        > dataset
-        Active Timestamp: 1
-        Channel: 13
-        Channel Mask: 07fff800
-        Ext PAN ID: d63e8e3e495ebbc3
-        Mesh Local Prefix: fd3d:b50b:f96d:722d/64
-        Master Key: dfd34f0f05cad978ec4e32b0413038ff
-        Network Name: OpenThread-8f28
-        PAN ID: 0x8f28
-        PSKc: c23a76e98f1a6483639b1ac1271e2e27
-        Security Policy: 0, onrcb
-        Done
-        > dataset commit active
-        Done
-        > ifconfig up
-        Done
-        > thread start
-        Done
+```
+> dataset init new
+Done
+> dataset
+Active Timestamp: 1
+Channel: 13
+Channel Mask: 07fff800
+Ext PAN ID: d63e8e3e495ebbc3
+Mesh Local Prefix: fd3d:b50b:f96d:722d/64
+Master Key: dfd34f0f05cad978ec4e32b0413038ff
+Network Name: OpenThread-8f28
+PAN ID: 0x8f28
+PSKc: c23a76e98f1a6483639b1ac1271e2e27
+Security Policy: 0, onrcb
+Done
+> dataset commit active
+Done
+> ifconfig up
+Done
+> thread start
+Done
+```
 
 1.  Switch back to the terminal window running the `tail` command. Logs should
     display in real time for the simulated node.
@@ -231,7 +233,7 @@ For example, to enable this for an nrf52840 connected to a Linux host:
 
 1.  Flash the NCP, connect it to the Linux host, and start `wpantund` as
     detailed in the [OpenThread Hardware Codelab](https://openthread.io/codelabs/openthread-hardware/#3).
-    
+
 1.  Once the NCP is running, check the `syslog` on the Linux machine:
 
         $ tail -F /var/log/syslog | grep "ot-ncp-ftd"
