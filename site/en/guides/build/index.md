@@ -62,13 +62,13 @@ The most common workflow is:
             $ ./bootstrap
             
     1.  Configure and build, using pre-defined platform examples with optional customization via common switches:
-        1.  Modify OpenThread compile-time constants in the selected platform's `/examples/platforms/<platform>/openthread-core-<platform>-config.h` file
+        1.  Modify OpenThread compile-time constants in the selected platform's `/examples/platforms/{platform}/openthread-core-{platform}-config.h` file
         1.  Build the configuration:
 
-                $ make -f examples/Makefile-<platform> <switches>
+                $ make -f examples/Makefile-{platform} <switches>
 
 1.  Flash the desired binary to the target platform. All generated binaries are
-    located in `/output/<platform>/bin`.
+    located in `/output/{platform}/bin`.
 
 Specific instructions on building supported platforms with GNU Autotools can be
 found in each example's [platform folder](https://github.com/openthread/openthread/tree/main/examples/platforms).
@@ -86,7 +86,7 @@ Type | Location
 Compile-time constants | Listed in all the header files in [`/src/core/config`](https://github.com/openthread/openthread/tree/main/src/core/config)
 Makefile build switches | Listed in [`/examples/common-switches.mk`](https://github.com/openthread/openthread/tree/main/examples/common-switches.mk)
 
-> Note: Each example platform included in OpenThread specifies some, but not all, of the constants and flags that the platform supports. Modify the example platform's `/openthread-core-<platform>-config.h` file to enable or disable compile-time constants prior to building.
+> Note: Each example platform included in OpenThread specifies some, but not all, of the constants and flags that the platform supports. Modify the example platform's `/openthread-core-{platform}-config.h` file to enable or disable compile-time constants prior to building.
 
 ### Build examples
 
@@ -106,7 +106,7 @@ $ make -f examples/Makefile-nrf52840 JAM_DETECTION=1
 
 ### Binaries
 
-The following binaries are generated in `/output/<platform>/bin` from the build process. To determine which binaries are generated, use configure option flags with the `./configure` command to generate an updated `Makefile` for building. For example, to build OpenThread and generate only the CLI binaries:
+The following binaries are generated in `/output/{platform}/bin` from the build process. To determine which binaries are generated, use configure option flags with the `./configure` command to generate an updated `Makefile` for building. For example, to build OpenThread and generate only the CLI binaries:
 
 ```
 $ ./configure --enable-cli
@@ -115,18 +115,17 @@ $ make
 
 Binary | Description | Configure option flags
 ---- | ---- | ----
-ot-cli-ftd | Full Thread device for SoC designs | --enable-cli<br/> --enable-ftd
-ot-cli-mtd | Minimal Thread device for SoC designs | --enable-cli<br/> --enable-mtd
-ot-ncp-ftd | Full Thread device for Network Co-Processor (NCP) designs | --enable-ncp<br/> --enable-ftd
-ot-ncp-mtd | Minimal Thread device for NCP designs | --enable-ncp<br/> --enable-mtd
-ot-rcp | Radio Co-Processor (RCP) design | --enable-ncp<br/> --enable-radio-only
+`ot-cli-ftd` | Full Thread device for SoC designs | `--enable-cli<br/> --enable-ftd`
+`ot-cli-mtd` | Minimal Thread device for SoC designs | `--enable-cli<br/> --enable-mtd`
+`ot-ncp-ftd` | Full Thread device for Network Co-Processor (NCP) designs | `--enable-ncp<br/> --enable-ftd`
+`ot-ncp-mtd` | Minimal Thread device for NCP designs | `--enable-ncp<br/> --enable-mtd`
+`ot-rcp` | Radio Co-Processor (RCP) design | `--enable-ncp<br/> --enable-radio-only`
 
 If neither these flags nor a platform example are not used, applications are not
-built but OpenThread library files are still generated in `/output/<platform>/lib` for use in a project.
+built but OpenThread library files are still generated in `/output/{platform}/lib` for use in a project.
 
 Check the example Makefiles for each platform to see which flags each platform
-supports. For example, [the TI CC2650 does not support
-FTDs](https://github.com/openthread/openthread/tree/main/examples/Makefile-cc2650#L44). For more information on FTDs and MTDs, see the
+supports. For more information on FTDs and MTDs, see the
 [Thread Primer](/guides/thread-primer/node-roles-and-types#device_types). For
 more information on SoC and NCP designs, see [Platforms](/platforms/).
 
