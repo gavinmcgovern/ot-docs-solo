@@ -248,11 +248,9 @@ Log levels may be changed at run time if dynamic log level control is enabled.
     1.  For a [system-on-chip (SoC)](/platforms#single-chip-thread-only-soc),
         use the [Logging API](/reference/group/api-logging) within your
         OpenThread application.
-    1.  For an NCP, use `wpanctl` on the command line:
+    1.  For an NCP, use `wpanctl` on the command line. See [`wpan-properties.h`](https://github.com/openthread/wpantund/tree/master/src/wpantund/wpan-properties.h) in the `wpantund` repository for all the properties exposed to `wpanctl` and the  [Spinel API](https://github.com/openthread/openthread/blob/da12dca4d9e82cda08aba272567affa188bf8b12/src/ncp/spinel.h#L308) for its log level definitions.
         
             $ wpanctl set OpenThread:LogLevel 5
-        
-        See [`wpan-properties.h`](https://github.com/openthread/wpantund/tree/master/src/wpantund/wpan-properties.h) in the `wpantund` repository for all the properties exposed to `wpanctl` and the  [Spinel API]({{ github_repo_ot }}/blob/da12dca4d9e82cda08aba272567affa188bf8b12/src/ncp/spinel.h#L308) for its log level definitions.
 
 ### License
 
