@@ -118,11 +118,11 @@ Logs are sent to the `syslog` by default. On Linux, this is `/var/log/syslog.`
 
 1.  Start a simulated node:
 
-        ./output/simulation/bin/ot-cli-ftd 1
+        $ ./output/simulation/bin/ot-cli-ftd 1
 
 1.  In a new terminal window, set up a real-time output of the OT logs:
 
-        tail -F /var/log/syslog | grep "ot-cli-ftd"
+        $ tail -F /var/log/syslog | grep "ot-cli-ftd"
 
 1.  On the simulated node, bring up Thread:
 
@@ -183,13 +183,13 @@ Logs may be viewed directly in the OpenThread CLI example app.
 1.  Edit the configuration file for the example platform and change the log
     output to the app. For the simulation example, this is
     `/examples/platforms/sim/openthread-core-sim-config.h`:
-    
+
         #define OPENTHREAD_CONFIG_LOG_OUTPUT OPENTHREAD_CONFIG_LOG_OUTPUT_APP
 
 1.  Build the simulation example with the desired level of logs. To enable all
     logs:
-    
-        $ make -f examples/Makefile-simulation FULL_LOGS=1</code>
+
+        $ make -f examples/Makefile-simulation FULL_LOGS=1
 
 1.  Start a simulated node:
 
