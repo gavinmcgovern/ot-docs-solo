@@ -59,7 +59,6 @@ file, prior to [building OpenThread](/guides/build):
 #define OPENTHREAD_CONFIG_PARENT_SEARCH_ENABLE 1
 #endif
 ```
-
 ## Parameters
 
 Use the following parameters in
