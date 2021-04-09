@@ -115,11 +115,11 @@ $ make
 
 Binary | Description | Configure option flags
 ---- | ---- | ----
-`ot-cli-ftd` | Full Thread device for SoC designs | `--enable-cli<br/> --enable-ftd`
-`ot-cli-mtd` | Minimal Thread device for SoC designs | `--enable-cli<br/> --enable-mtd`
-`ot-ncp-ftd` | Full Thread device for Network Co-Processor (NCP) designs | `--enable-ncp<br/> --enable-ftd`
-`ot-ncp-mtd` | Minimal Thread device for NCP designs | `--enable-ncp<br/> --enable-mtd`
-`ot-rcp` | Radio Co-Processor (RCP) design | `--enable-ncp<br/> --enable-radio-only`
+`ot-cli-ftd` | Full Thread device for SoC designs | `--enable-cli`<br/> `--enable-ftd`
+`ot-cli-mtd` | Minimal Thread device for SoC designs | `--enable-cli`<br/> `--enable-mtd`
+`ot-ncp-ftd` | Full Thread device for Network Co-Processor (NCP) designs | `--enable-ncp`<br/> `--enable-ftd`
+`ot-ncp-mtd` | Minimal Thread device for NCP designs | `--enable-ncp`<br/> `--enable-mtd`
+`ot-rcp` | Radio Co-Processor (RCP) design | `--enable-ncp`<br/> `--enable-radio-only`
 
 If neither these flags nor a platform example are not used, applications are not
 built but OpenThread library files are still generated in `/output/{platform}/lib` for use in a project.
