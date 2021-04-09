@@ -57,7 +57,7 @@ in the preceding 16 seconds. In this example, the Jam Detection State remains
 `true` for the next 13 seconds.
 
 ```
-11000010 01001000 00000110 10001100 01000001 01101110 011 11111 11110000
+11000010 01001000 00000110 10001100 01000001 01101110 011{11111 11110000}
                                       [00001 01101110 011] = 8 in 16
 ```
 
