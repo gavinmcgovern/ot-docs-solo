@@ -32,14 +32,13 @@ information:
 *   An empty payload.
 
 By default, a MAC header contains an 802.15.4 ACK request. To disable this
-request in the Child Supervision message, set the
-<a href="#msg-no-ack-request">`OPENTHREAD_CONFIG_CHILD_SUPERVISION_MSG_NO_ACK_REQUEST`</a>
-parameter to 1.
+request in the Child Supervision message, set the 
+[`OPENTHREAD_CONFIG_CHILD_SUPERVISION_MSG_NO_ACK_REQUEST`](#msg-no-ack-request) parameter to 1.
 
 ### On the child
 
 If an SED does not hear from its parent router within the
-<a href="#check-timeout">`OPENTHREAD_CONFIG_CHILD_SUPERVISION_CHECK_TIMEOUT`</a>,
+[`OPENTHREAD_CONFIG_CHILD_SUPERVISION_CHECK_TIMEOUT`](#check-timeout),
 it assumes that it has lost its connection to the parent router and initiates
 the [MLE
 Attach](/guides/thread-primer/network-discovery#join_an_existing_network)
