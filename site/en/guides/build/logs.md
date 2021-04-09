@@ -149,7 +149,10 @@ Done
 Done
 ```
 
-Switch back to the terminal window running the `tail` command. Logs should display in real time for the simulated node.
+Switch back to the terminal window running the `tail` command. Logs should display in real time for 
+the simulated node. Note the log tags in the output: `[INFO]`, `[DEBG]`, `[NOTE]`. These all correspond 
+to the [log levels](#log-levels). For example, if you change the log level to `OT_LOG_LEVEL_INFO`, 
+the `DEBG` logs disappear from the output.
 
 ```
 ot-cli-ftd[30055]: [1] [DEBG]-MAC-----: SrcAddrMatch - Cleared all entries
@@ -174,10 +177,6 @@ ot-cli-ftd[30055]: [1] [INFO]-CORE----: Non-volatile: ... pid:0x8581bc9, mlecntr
 ot-cli-ftd[30055]: [1] [DEBG]-MLE-----: Store Network Information
 ot-cli-ftd[30055]: [1] [INFO]-MLE-----: Send Link Request (ff02:0:0:0:0:0:0:2)
 ```
-
-Note the log tags in the output: `[INFO]`, `[DEBG]`, `[NOTE]`. These all
-correspond to the [log levels](#log-levels). For example, if you change the log
-level to `OT_LOG_LEVEL_INFO`, the `DEBG` logs disappear from the output.
 
 ### View logs in the CLI app
 
