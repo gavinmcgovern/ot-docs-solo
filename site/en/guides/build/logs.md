@@ -149,8 +149,7 @@ Done
 Done
 ```
 
-1.  Switch back to the terminal window running the `tail` command. Logs should
-    display in real time for the simulated node.
+Switch back to the terminal window running the `tail` command. Logs should display in real time for the simulated node.
 
 ```
 ot-cli-ftd[30055]: [1] [DEBG]-MAC-----: SrcAddrMatch - Cleared all entries
